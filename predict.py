@@ -51,11 +51,12 @@ y_pred=regr.predict(X_test)
 
 y_demo=list(y_pred)
 
+plt.plot(sorted(y_pred))
+plt.plot(sorted(y_test))
+
+
 from sklearn.metrics import mean_squared_error
 from math import sqrt
-
-
-
 rms = sqrt(mean_squared_error(y_test, y_pred))
 
 
